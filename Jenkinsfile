@@ -6,7 +6,7 @@ pipeline {
         echo 'H/4 * * * *'
       }
     }
-    
+
     stage('Get news') {
       steps {
         echo 'get news'
@@ -22,6 +22,7 @@ pipeline {
     stage('Email') {
       steps {
         echo 'Email to me'
+        mail(subject: 'Hello', body: 'Hello', to: 'szwnba@qq.com')
       }
     }
 
