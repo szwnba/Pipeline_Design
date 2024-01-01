@@ -1,13 +1,20 @@
 pipeline {
   agent any
-   triggers {
-       cron('H/1 * * * *')
-  }
-  
   stages {
     stage('build') {
-      steps {
-        echo 'hello world'
+      parallel {
+        stage('build') {
+          steps {
+            echo 'hello world'
+          }
+        }
+
+        stage('build2') {
+          steps {
+            echo 'test bulid2'
+          }
+        }
+
       }
     }
 
@@ -23,5 +30,8 @@ pipeline {
       }
     }
 
+  }
+  triggers {
+    cron('H/1 * * * *')
   }
 }
