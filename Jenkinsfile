@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Schedule') {
       steps {
-        echo 'plan'
+        echo 'H/4 * * * *'
       }
     }
     
