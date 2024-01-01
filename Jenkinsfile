@@ -1,15 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Get news') {
       steps {
-        echo 'hello world'
+        echo 'get news'
       }
     }
 
-    stage('deploy') {
+    stage('Ai transfer') {
       steps {
         echo 'test deploy'
+      }
+    }
+
+    stage('Email') {
+      steps {
+        echo 'Email to me'
       }
     }
 
