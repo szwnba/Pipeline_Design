@@ -22,7 +22,6 @@ pipeline {
     stage('Email') {
       steps {
         echo 'Email to me'
-        mail(subject: 'Hello', body: 'Hello', to: 'szwnba@qq.com')
       }
     }
 
