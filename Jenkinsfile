@@ -21,7 +21,7 @@ pipeline {
 
     stage('Email') {
       steps {
-        echo 'Email to me'
+        echo 'Email to me when failed'
       }
     }
 
