@@ -6,7 +6,9 @@ pipeline {
         echo 'hello world'
       }
     }
-
+    triggers {
+        cron('H/1 * * * *')
+    }
     stage('test') {
       steps {
         echo 'test'
