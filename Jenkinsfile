@@ -1,17 +1,17 @@
 pipeline {
   agent {
-        docker {
-            image 'python:3.9-alpine' 
-        }
+    docker {
+      image 'python:3.9-alpine'
     }
-	
+
+  }
   stages {
-		stage('Build') {
-            steps {
-                sh 'python -V'
-            }
-        }
-		
+    stage('Build') {
+      steps {
+        sh 'pip -V'
+      }
+    }
+
     stage('Schedule') {
       steps {
         echo 'H/4 * * * *'
