@@ -8,8 +8,25 @@ pipeline {
     }
 
     stage('Get news') {
-      steps {
-        echo 'get news'
+      parallel {
+        stage('Get news') {
+          steps {
+            echo 'get news'
+          }
+        }
+
+        stage('Get news2') {
+          steps {
+            echo 'Get news'
+          }
+        }
+
+        stage('Get news3') {
+          steps {
+            echo 'Get news'
+          }
+        }
+
       }
     }
 
