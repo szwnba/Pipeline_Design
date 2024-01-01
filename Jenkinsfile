@@ -1,6 +1,18 @@
 pipeline {
-  agent any
+  agent {
+        docker {
+            image 'maven:3-alpine'
+            args '-v /root/.m2:/root/.m2'
+        }
+    }
+	
   stages {
+		stage('Build') {
+            steps {
+                sh 'mvn -version'
+            }
+        }
+		
     stage('Schedule') {
       steps {
         echo 'H/4 * * * *'
