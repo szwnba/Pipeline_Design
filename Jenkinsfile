@@ -43,7 +43,4 @@ pipeline {
     }
 
   }
-  triggers {
-    cron('H/4 * * * *')
-  }
 }
