@@ -1,6 +1,12 @@
 pipeline {
   agent any
   stages {
+    stage('schedule') {
+      steps {
+        echo 'plan'
+      }
+    }
+    
     stage('Get news') {
       steps {
         echo 'get news'
