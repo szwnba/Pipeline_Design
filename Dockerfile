@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.9-alpine
 
 #将当前目录中的文件加入到镜像中的/app目录下
 ADD . /app
